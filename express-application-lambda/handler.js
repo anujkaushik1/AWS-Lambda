@@ -18,6 +18,7 @@ router.get("/hello", (req, res, next) => {
 
 app.use('/kaushik', router)
 
-app.listen(3000);
+app.listen(3000); // will use only when doing local deployed, else remove or make env to handle this
+
 
 exports.handler = serverless(app);
