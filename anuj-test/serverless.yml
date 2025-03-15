@@ -1,0 +1,18 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: anujkaushik1512
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: anuj-express
+service: anuj-test-api
+
+provider:
+  name: aws 
+  runtime: nodejs18.x
+  region: ap-south-1
+
+functions:
+  function-name-anuj:
+    handler: handler.hello
+    events: 
+      - httpApi:  
+          path: /kaushik
+          method: GET
